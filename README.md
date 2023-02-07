@@ -18,7 +18,7 @@ There are several ways to do this, two recommended ways are:
 
   b. Download it from [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki#tesseract-installer-for-Windows "Much simpler")
 
-***Tesseract is also available for both Linux and macOS, the processes to download them are outlined [here](https://tesseract-ocr.github.io/tessdoc/).***
+***Tesseract is also available for both Linux and macOS, the processes to download them are outlined [here](https://tesseract-ocr.github.io/tessdoc/Installation.html).***
 
 Once you have a version of Tesseract downloaded (this version was developped with version 5.3.0.20221214, but any should work), choose the version of the program for your operation system from below:
 - [Windows](https://www.computerhope.com/issues/ch000549.htm)
