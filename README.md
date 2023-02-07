@@ -6,3 +6,14 @@ This project is a visual interface version of Tesseract. Tesseract is an Open So
 ...snip...    
 <a name="headers"/>
 ## Headers
+ag
+g
+g
+g
+g
+g
+g
+g
+g
+g
+## Emphasis
