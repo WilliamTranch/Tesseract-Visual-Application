@@ -4,7 +4,7 @@ This project is a visual interface version of Tesseract developped in Python, it
 - [What is Tesseract?](#What-is-Tesseract?)  
 - [How do I use this?](#How-do-I-use-this?)  
 - [Common Issues](#Common-Issues)  
-<a name="headers"/>
+
 ## What is Tesseract?
 Tesseract is an Open Source Optical Character Recognition (OCR). Originally developed by HP in the 1980s as proprietary software, its been open source for nearly 20 years now. It is still undergoing development and is currently sponsored by Google. 
 
