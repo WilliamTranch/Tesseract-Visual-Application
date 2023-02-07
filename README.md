@@ -18,7 +18,14 @@ There are several ways to do this, two recommended ways are:
 
   b. Download it from [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki#tesseract-installer-for-Windows "Much simpler")
 
-***it is also available for macOS and Linux, these processes are outlined [here](https://tesseract-ocr.github.io/tessdoc/)***
+***Tesseract is also available for both Linux and macOS, the processes to download them are outlined [here](https://tesseract-ocr.github.io/tessdoc/)***
+
+Once you have a version of Tesseract downloaded (this version was developped with version 5.3.0.20221214, but any should work), choose the version of the program for your operation system from below:
+- [Windows](https://www.computerhope.com/issues/ch000549.htm)
+- [Linux](https://phoenixnap.com/kb/linux-add-to-path)
+- [macOS](https://techpp.com/2021/09/08/set-path-variable-in-macos-guide)
+
+Then simply run the application and select the files which you'd like to be processed.
 
 ## Common Issues
 ### It says "Tesseract is not on PATH"
