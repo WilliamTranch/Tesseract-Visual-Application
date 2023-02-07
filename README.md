@@ -34,6 +34,6 @@ This error can appear if you do not have Tesseract installed, or the Tesseract f
 - [Linux](https://phoenixnap.com/kb/linux-add-to-path)
 - [macOS](https://techpp.com/2021/09/08/set-path-variable-in-macos-guide)
 
-If you can't add it to your PATH variable due to a lack of administrator priviledges, double click on the red text in the application to manually find the folder, this will need to be redone everytime you run the application.
+If you can't add it to your PATH variable due to a lack of administrator priviledges, double click on the red text in the application to manually find the folder, this will need to be redone everytime you run the application. This only works on Windows as of now.
 ### I can't find the language that I want to read in the options menu
 The language options available to you are the languages which your system currently has installed as found by Tesseract. You might need to download the language and restart your computer to fix this issue.
