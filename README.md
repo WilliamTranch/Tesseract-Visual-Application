@@ -29,5 +29,4 @@ This error can appear if you do not have Tesseract installed, or the Tesseract f
 
 If you can't add it to your PATH variable due to a lack of administrator priviledges, double click on the red text in the application to manually find the folder, this will need to be redone everytime you run the application.
 ### I can't find the language that I want to read in the options menu
-The language options available to you are the languages which your system currently has installed as found by Tesseract. You might need to download the language then restart your computer to fix this issue.
-
+The language options available to you are the languages which your system currently has installed as found by Tesseract. You might need to download the language and restart your computer to fix this issue.
