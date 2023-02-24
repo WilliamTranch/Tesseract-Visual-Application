@@ -22,7 +22,7 @@ There are several ways to do this, two recommended ways are:
 
 Once you have a version of Tesseract downloaded (this version was developped with version 5.3.0.20221214, but any should work), choose the version of the program for your operation system from below:
 - [Windows](https://www.computerhope.com/issues/ch000549.htm)
-- [Linux](https://phoenixnap.com/kb/linux-add-to-path)
+- [Linux](https://1drv.ms/u/s!AoTWwASznsXMg_hw0DuwZnAV-hsZNg?e=1KOxMV)
 - [macOS](https://techpp.com/2021/09/08/set-path-variable-in-macos-guide)
 
 Then simply run the application and select the files which you'd like to be processed.
@@ -34,6 +34,6 @@ This error can appear if you do not have Tesseract installed, or the Tesseract f
 - [Linux](https://phoenixnap.com/kb/linux-add-to-path)
 - [macOS](https://techpp.com/2021/09/08/set-path-variable-in-macos-guide)
 
-If you can't add it to your PATH variable due to a lack of administrator priviledges, double click on the red text in the application to manually find the folder, this will need to be redone everytime you run the application. This only works on Windows as of now.
+If you can't add it to your PATH variable due to a lack of administrator priviledges, double click on the red text in the application to manually find the folder, this will need to be redone everytime you run the application. This only works on Windows as of now, and I have no idea why.
 ### I can't find the language that I want to read in the options menu
 The language options available to you are the languages which your system currently has installed as found by Tesseract. You might need to download the language and restart your computer to fix this issue.
