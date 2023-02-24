@@ -23,7 +23,7 @@ There are several ways to do this, two recommended ways are:
 Once you have a version of Tesseract downloaded (this version was developped with version 5.3.0.20221214, but any should work), choose the version of the program for your operation system from below:
 - [Windows](https://1drv.ms/u/s!AoTWwASznsXMg_hyqFE_xDvr70utlA?e=fJF9XY)
 - [Linux](https://1drv.ms/u/s!AoTWwASznsXMg_hxzjpeyAakCgfBUg?e=bwFYa7)
-- [macOS](https://1drv.ms/u/s!AoTWwASznsXMg_hzp3HyjS2Um9W1vA?e=4gQ0WW)
+- [macOS](https://1drv.ms/u/s!AoTWwASznsXMg_hzp3HyjS2Um9W1vA?e=4gQ0WW) (currently in-progress)
 
 Then simply run the application and select the files which you'd like to be processed.
 
