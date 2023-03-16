@@ -27,6 +27,9 @@ Once you have a version of Tesseract downloaded (this version was developped wit
 
 Then simply run the application and select the files which you'd like to be processed.
 
+## Source Code
+The source code is also available. It could use some improvements, should you have any suggestions feel free to let me know.
+
 ## Common Issues
 ### It says "Tesseract is not on PATH"
 This error can appear if you do not have Tesseract installed, or the Tesseract folder (not the executable) is not on your PATH environment variable. See how to add it to your PATH variable for your specific OS below.
