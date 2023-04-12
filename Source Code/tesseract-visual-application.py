@@ -15,14 +15,18 @@ from multiprocessing import Pool, freeze_support
 import multiprocessing
 from itertools import zip_longest
 from tesseractClass import tessFile
+# langOptions is a global variable which displays all of the available languages, it is left originally blank in case the user does not have Tesseract Installed yet
 global langOptions
 langOptions = [""]
+# CpusOptions is just a list with percentages used to show to user, it's set here because I felt like it
 cpusOptions = ["25%","50%","75%","100%"]
+# This function serves to update the input button's label to reflect if Multiple Files? is selected or not
 def update_label():
     if var.get() == 1:
         chooseBtn['text'] = "Choose the Input Directory"
     else:
         chooseBtn['text'] = "Choose the Input File"
+# If the user doesn't have Tesseract on their path variable, they can use this function to manually assign the location to the pytesseract module, Only Works on Windows becuase I have no idea how to do it on other systems
 def chooseTesseractDir():
     os_name = platform.system()
     if os_name == "Windows":
@@ -41,6 +45,7 @@ def chooseTesseractDir():
                     lblMis.grid(row=2,column=1)
             except:
                 messagebox.showinfo(title="Error", message="There was an error manually assigning Tesseract.exe. This could be the wrong application or possibly Tesseract is unable to find a system language.")
+# Function chooses the proper input file/directory for tesseract, checks to see if Multiple Files? is checked or not
 def chooseInDirectory():
     if var.get() == 1:
         dirName = filedialog.askdirectory(title="Select the Directory for the files...")
@@ -50,11 +55,13 @@ def chooseInDirectory():
         fileDirEntry.delete(0, tk.END)
         fileDirEntry.insert(0, dirName)
     return fileDirEntry
+# Function chooses the proper output directory for the CSV file
 def chooseOutDirectory():
     dirName = filedialog.askdirectory(title="Select the Output Directory for the files...")
     outFDirEntry.delete(0, tk.END)
     outFDirEntry.insert(0, dirName)
     return outFDirEntry
+# Function runs the function if it was submitted visually. This can be ignored as most people won't ever need it, I only wrote it like this so I could automate it with Batch files on Windows and because I wanted to try another language. To do this yourself, use pyinstaller to make your own exe without the windowed flag
 def visualSubmit():
     window.withdraw()
     if fileDirEntry.get() == "":
@@ -74,11 +81,11 @@ def visualSubmit():
     elif "75%" in cpusDrop.get():  cpuFraction = 0.75
     elif "100%" in cpusDrop.get(): cpuFraction = 1.00
     languageChosen = langDrop.get()
-    maxRunTime = 600
     varVal = var.get()
     submitForm(fileDir=fileDirEntry.get(), outFDir=outFDirEntry.get(), angles=angles, varVal=varVal, languageChosen=languageChosen)
     window.deiconify()
     return
+# This function is the main function, it runs the Tesseract Class Functions, along with the Multiprocessing code. It is written terribly inefficiently but I do not care.
 def submitForm(fileDir, outFDir, angles, varVal, languageChosen, cpuFraction): #Params: fileDir, outFDir, angles
     if "\\" in fileDir:
         fileDir = fileDir.replace("\\", "/")
@@ -124,6 +131,7 @@ def submitForm(fileDir, outFDir, angles, varVal, languageChosen, cpuFraction): #
     resultsList = []
     queue = multiprocessing.Manager().Queue()
     if varVal == 1:
+        # run if directory
         itemsOnList = 0
         for fileAHHH in fileList:
             FormattedName = fileDir + "/" + fileAHHH
@@ -150,8 +158,9 @@ def submitForm(fileDir, outFDir, angles, varVal, languageChosen, cpuFraction): #
             p.join()
             values = resultsObj.get()
     else:
+        # run if individual file, no multiprocessing, because theres no need
         FormattedName = fileDir + "/" + file
-        excel_data = tessFile(FormattedName, angles, languageChosen, queue,600)
+        excel_data = tessFile(FormattedName, angles, languageChosen, queue)
         root.update()
         values = []
         values.append(excel_data)
@@ -204,6 +213,7 @@ if __name__ == "__main__":
     parser.add_argument("-c", "--cpu-fraction",type=float, help="Fraction of total CPU count to be used by the application")
     args=parser.parse_args()
     if args.source_file_location == None and args.multiple_files == None and args.destination_file_location == None and args.angles == None and args.language == None and args.cpu_fraction == None:
+        # if running visually
         print("Running Normally")
         window = tk.Tk()
         icon16Tk = Image.open(resource_path('16Icon.png'))
@@ -288,6 +298,7 @@ if __name__ == "__main__":
         lblSpc.grid(row=1,column=1)
         window.mainloop()
     else:
+        # if running from command line
         print("Running from command line")
         fileSrc = args.source_file_location
         fileDest = args.destination_file_location
